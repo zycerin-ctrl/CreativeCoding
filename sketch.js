@@ -26,6 +26,10 @@ function mousePressed() {
 
 function draw() {
 
+    erase();
+    ellipse(width / 2, height / 2, 220, 220);
+    noErase();
+    
     let rms = 0;
 
     if (analyzer.getLevel()) {
