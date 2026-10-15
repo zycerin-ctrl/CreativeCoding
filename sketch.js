@@ -9,8 +9,6 @@ function setup() {
     let myCanvas = createCanvas(600, 400);
     myCanvas.parent('myContainer');
 
-    background(220);
-
     analyzer = new p5.Amplitude();
     analyzer.setInput(beat);
 }
@@ -26,10 +24,8 @@ function mousePressed() {
 
 function draw() {
 
-    erase();
-    ellipse(width / 2, height / 2, 220, 220);
-    noErase();
-    
+    background(220);
+
     let rms = 0;
 
     if (analyzer.getLevel()) {
